@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>じゃんけんアプリ</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/earlyaccess/nicomoji.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- ここから下に書いていく -->
+    <h1 id="heading">Welcome！</h1>
+    <div class="kibun">
+      <h1 class="btnText">1. いまのきもちは？</h1>
+      <!-- ボタン活性・画像表示をしたいため関数を複数登録しておく -->
+      <!-- onclick="hoge();foo();"で記述可能 -->
+      <button
+        class="btn btn--pink btn--circle"
+        type="button"
+        onclick="chiikawa();chi();"
+      >
+        Good
+      </button>
+      <button
+        class="btn btn--blue btn--circle"
+        type="button"
+        onclick="hachiware();chi();"
+      >
+        Umm...
+      </button>
+      <button
+        class="btn btn--yellow btn--circle"
+        type="button"
+        onclick="usagi();chi();"
+      >
+        High!!!
+      </button>
+      <!-- Character表示 -->
+      <div class="character">
+        <img id="image_file" src="" />
+      </div>
+    </div>
+    <!-- じゃんけん -->
+    <h1 class="btnText">2. キャラとじゃんけんしてみよう！</h1>
+    <p><img id="jankenpon" width="100" height="100" /></p>
+    <!-- 画像 -->
+    <div class="rsp">
+      <!--  <button onClick=”関数名”>で「R_Click」プログラムを動かすボタン -->
+      <!-- 動作してほしいidの居場所を指定 -->
+      <button class="janbtn" onclick="R_Click(0);" disabled>グー</button>
+      <button class="janbtn" onclick="R_Click(1);" disabled>チョキ</button>
+      <button class="janbtn" onclick="R_Click(2);" disabled>パー</button>
+    </div>
+    <br />
+    <p><img id="jankenpon2" width="100" height="100" /></p>
+    <!-- 画像 -->
+    <div id="Rejan1"></div>
+    <div id="Rejan2"></div>
+    <script src="/js/index.js"></script>
+    <!-- ここから上に書いていく -->
+  </body>
+</html>
